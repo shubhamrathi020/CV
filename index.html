@@ -1,170 +1,257 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shubham Rathi — Senior Full-Stack Engineer</title>
+  <meta name="description" content="Shubham Rathi is a senior full-stack engineer with ~8 years of experience building secure, scalable web platforms with React, Angular, Node.js, .NET and Go.">
+  <meta name="theme-color" content="#0b0d14">
+  <meta property="og:title" content="Shubham Rathi — Senior Full-Stack Engineer">
+  <meta property="og:description" content="~8 years building secure, scalable web platforms: React, Angular, Node.js, .NET, Go, cloud.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%236d5efc'/%3E%3Ctext x='32' y='43' font-family='Arial' font-size='30' font-weight='700' fill='white' text-anchor='middle'%3ESR%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    /* Apply saved / system theme before paint to avoid a flash */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (!t) t = window.matchMedia && matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Alkalami&family=Montez&family=Montserrat&family=Sacramento&family=Silkscreen&family=Sofia&family=Yesteryear&display=swap"
-      rel="stylesheet"
-    />
-    <!-- font-family: 'Alkalami', serif;
-  font-family: 'Montez', cursive;
-  font-family: 'Montserrat', sans-serif;
-  font-family: 'Sacramento', cursive;
-  font-family: 'Silkscreen', cursive;
-  font-family: 'Sofia', cursive;
-  font-family: 'Yesteryear', cursive; -->
-
-    <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <title>Shubham Rathi</title>
-  </head>
-  <body>
-    <header class="header">
-      <img class="cloud1" src="images/cloudy.png" alt="cloud" />
-      <div class="myself">
-        <h1>SHUBHAM RATHI</h1>
-        <h2>A WEB DEVELOPER</h2>
-      </div>
-      <img class="cloud2" src="images/cloudy.png" alt="cloud" />
-      <p class="myShortDescription">
-        A passionate web developer, experienced in developing responsive UI for
-        web application and developing ene-to-end flow.
-      </p>
-      <img class="mountain" src="images/mountain.png" alt="mountain" />
-      <img class="mountain" src="images/mountain.png" alt="mountain" />
-      <div class="navigation">
-        <ul class="nav-list">
-          <li class="nav-item">Work Experience</li>
-          <li class="nav-item"><a href="#skl">Skills</a></li>
-          <li class="nav-item"><a href="#edu">Education</a></li>
-          <li class="nav-item"><a href="#ach">Achievements</a></li>
-          <li class="nav-item"><a href="#hbs">Hobbies & Extra</a></li>
-          <li class="nav-item f-l">
-            <input type="text" name="search" class="search-input" />
-            <img src="images/search.png" alt="search" class="search-icon" />
-          </li>
-          <li class="nav-item f-l">
-            <div class="dropdown">
-              Profile
-              <div class="dropdown-content">
-                <a href="#">Me</a>
-                <a href="#">Hisotry</a>
-              </div>
-            </div>
-          </li>
-          <li class="nav-item f-l">
-            <div class="dropdown">
-              Services
-              <div class="dropdown-content">
-                <a href="#">Ask anything</a>
-                <a href="#">Raise query</a>
-              </div>
-            </div>
-          </li>
+  <header class="nav" id="top">
+    <div class="wrap nav__inner">
+      <a class="brand" href="#top" aria-label="Shubham Rathi, home">
+        <span class="brand__mark">SR</span>
+        <span class="brand__name">Shubham Rathi</span>
+      </a>
+      <nav aria-label="Primary">
+        <ul class="nav__links" id="navLinks">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch to light theme" title="Toggle theme">
+          <svg class="i-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
+          <svg class="i-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+        <button class="icon-btn menu-btn" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        </button>
       </div>
-    </header>
-    <hr />
-    <section class="myDetails">
-      <div id="skl" class="skills">
-        <h3>Skills</h3>
-        <div class="skill">
-          <h4>Coding</h4>
-          <img class="skillImage coding" src="images/coding.png" alt="coding" />
-          <p class="skillDescription">
-            Coding responsive web application and also creating end-to-end flow
-            from getting data from api to presnting it to end user.
-          </p>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="wrap hero__inner">
+        <p class="eyebrow reveal"><span class="dot" aria-hidden="true"></span> Open to senior / lead engineering roles</p>
+        <h1 class="reveal">Hi, I'm <span class="grad">Shubham Rathi</span>.<br>I build secure, scalable web platforms.</h1>
+        <p class="lead reveal">Senior full-stack engineer with ~8 years of experience across frontend architecture, backend systems and infrastructure — from government-grade SSO and role-based access to agent-facing workflow tools.</p>
+        <div class="cta reveal">
+          <a class="btn btn--primary" href="#work">See my work</a>
+          <a class="btn btn--ghost" href="https://github.com/shubhamrathi020" target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.6 22.4c.6.1.8-.3.8-.6v-2c-3.2.7-3.9-1.4-3.9-1.4-.5-1.3-1.3-1.7-1.3-1.7-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 0 1 5.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6A11.5 11.5 0 0 0 12 .5z"/></svg>
+            GitHub
+          </a>
+          <a class="btn btn--ghost" href="#contact">Get in touch</a>
         </div>
-        <hr />
-        <div class="skill">
-          <h4>Desinging</h4>
-          <img
-            class="skillImage designing"
-            src="images/retouch.png"
-            alt="designing"
-          />
-          <p class="skillDescription">
-            Designing repsonsive web screens that suits and is loved by the user
-          </p>
-        </div>
-      </div>
-      <hr />
-      <div id="edu" class="education">
-        <h3>Education</h3>
-        <table class="educationTable">
-          <thead>
-            <tr>
-              <th>Study</th>
-              <th>Speciality</th>
-              <th>Institution</th>
-              <th>Time Period</th>
-              <th>Percentage/Grade</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>B.Tech.</td>
-              <td>Mechanical Engineering</td>
-              <td>Jaipur Engineering College & Research Centre, Jaipur</td>
-              <td>2014-2018</td>
-              <td>72.2</td>
-            </tr>
-            <tr>
-              <td>12 <sup>th</sup></td>
-              <td>PCM</td>
-              <td>Gandhi Bal Mandir Sr. Sec. School, Jaisalmer</td>
-              <td>2013-2014</td>
-              <td>84</td>
-            </tr>
-            <tr>
-              <td>10 <sup>th</sup></td>
-              <td>Common subjects</td>
-              <td>Gandhi Bal Mandir Sr. Sec. School, Jaisalmer</td>
-              <td>2010-2011</td>
-              <td>75</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <div id="ach" class="achievements"></div>
-      <div id="hbs" class="hobbies">
-        <h3>Hobbies</h3>
-        <ul>
-          <li>Sketching</li>
-          <li>Exercise</li>
-          <li>Dancing</li>
+        <ul class="stats reveal" aria-label="Highlights">
+          <li><strong>~8 yrs</strong><span>professional experience</span></li>
+          <li><strong>5</strong><span>languages &amp; frameworks in production</span></li>
+          <li><strong>OAuth 2.0</strong><span>+ PKCE SSO &amp; RBAC</span></li>
+          <li><strong>Full stack</strong><span>UI → API → DB → CI/CD</span></li>
         </ul>
       </div>
     </section>
-    <hr />
-    <footer class="footer">
-      <h3>Contact here</h3>
-      <div>
-        <a class="socialLink" href="https://linkedin.com" target="_blank">
-          LinkedIn
-        </a>
-        <span class="socialLinkSeperator">|</span>
-        <a class="socialLink" href="https://twitter.com" target="_blank">
-          Twitter
-        </a>
-        <span class="socialLinkSeperator">|</span>
-        <a class="socialLink" href="https://instagram.com" target="_blank">
-          Instagram
-        </a>
-        <span class="socialLinkSeperator">|</span>
-        <a class="socialLink" href="https://facebook.com" target="_blank">
-          Facebook
-        </a>
-        <p class="copyright">
-          Copyright &copy; Shubham Rathi. All rights reserved.
-        </p>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="wrap grid-2">
+        <div class="reveal">
+          <p class="kicker">About</p>
+          <h2>Engineering that holds up in production.</h2>
+        </div>
+        <div class="prose reveal">
+          <p>I'm a full-stack software engineer based in India. Over roughly eight years I've worked across the whole application — Angular and React frontends, Node.js, .NET and Go backends, SQL and NoSQL data stores, and the CI/CD that ships it all.</p>
+          <p>I care about the parts that make software trustworthy: authentication and authorisation done properly, clear system boundaries, sensible trade-offs, and interfaces that people actually enjoy using. I like to explain the <em>why</em> behind a design as much as build it.</p>
+          <p>Right now I'm deepening my work in system design, cloud (GCP) and applied GenAI / agentic systems, and I'm looking for senior or lead roles at product companies where I can own problems end to end and mentor others.</p>
+        </div>
       </div>
-    </footer>
-  </body>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="kicker">Skills</p>
+          <h2>The toolbox</h2>
+        </div>
+        <div class="cards cards--4">
+          <article class="card reveal">
+            <h3>Frontend</h3>
+            <ul class="chips">
+              <li>Angular</li><li>React.js</li><li>TypeScript</li><li>JavaScript</li><li>HTML &amp; CSS</li><li>Responsive UI</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Backend</h3>
+            <ul class="chips">
+              <li>Node.js</li><li>.NET</li><li>Go</li><li>NestJS</li><li>REST APIs</li><li>Swagger / OpenAPI</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Data</h3>
+            <ul class="chips">
+              <li>MySQL</li><li>PostgreSQL</li><li>MongoDB</li><li>Prisma</li><li>Schema design</li>
+            </ul>
+          </article>
+          <article class="card reveal">
+            <h3>Security &amp; Delivery</h3>
+            <ul class="chips">
+              <li>OAuth 2.0 + PKCE</li><li>SSO</li><li>RBAC</li><li>JWT</li><li>Git</li><li>Jenkins</li><li>Bitbucket</li><li>Jira</li>
+            </ul>
+          </article>
+        </div>
+        <p class="note reveal">Currently exploring: <span class="mono">GCP · system design · GenAI &amp; agentic AI</span></p>
+      </div>
+    </section>
+
+    <!-- WORK -->
+    <section id="work" class="section">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="kicker">Selected work</p>
+          <h2>Things I've built</h2>
+        </div>
+        <div class="work">
+          <article class="work__item reveal">
+            <div class="work__tag mono">Platform · Government</div>
+            <h3>Licence permitting platform</h3>
+            <p>A citizen-facing platform for applying for and managing government licences. I designed and built the authentication layer — single sign-on with <strong>OAuth 2.0 + PKCE</strong> — and <strong>role-based access control</strong> so applicants, officers and administrators each see and do only what they should.</p>
+            <ul class="chips chips--sm"><li>OAuth 2.0 + PKCE</li><li>SSO</li><li>RBAC</li><li>Full stack</li></ul>
+          </article>
+          <article class="work__item reveal">
+            <div class="work__tag mono">Internal tool · Contact centre</div>
+            <h3>Guided Walkthrough module</h3>
+            <p>A decision-tree workflow tool that walks call-centre agents through a conversation step by step: Yes/No branching, blocked-exit screens, helper pages and conclusion screens, with a sidebar that tracks progress. I prototyped several visual directions before settling on a two-column layout matched to the design team's Figma.</p>
+            <ul class="chips chips--sm"><li>UX design</li><li>Workflow engine</li><li>Frontend architecture</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section section--alt">
+      <div class="wrap">
+        <div class="section__head reveal">
+          <p class="kicker">Open source</p>
+          <h2>Projects on GitHub</h2>
+        </div>
+        <div class="cards cards--3">
+          <a class="card card--link reveal" href="https://github.com/shubhamrathi020/e-commerce-frontend" target="_blank" rel="noopener">
+            <h3>E-commerce · Frontend</h3>
+            <p>Storefront built with Angular 20 and TypeScript.</p>
+            <ul class="chips chips--sm"><li>Angular</li><li>TypeScript</li></ul>
+            <span class="card__go" aria-hidden="true">View repo →</span>
+          </a>
+          <a class="card card--link reveal" href="https://github.com/shubhamrathi020/e-commerce-backend" target="_blank" rel="noopener">
+            <h3>E-commerce · Backend API</h3>
+            <p>Node.js / Express REST API with JWT authentication, products, cart and Swagger docs.</p>
+            <ul class="chips chips--sm"><li>Node.js</li><li>Express</li><li>JWT</li></ul>
+            <span class="card__go" aria-hidden="true">View repo →</span>
+          </a>
+          <a class="card card--link reveal" href="https://github.com/shubhamrathi020/e-commerce-database" target="_blank" rel="noopener">
+            <h3>E-commerce · Database</h3>
+            <p>MySQL schema and seed data for users, products, categories and orders.</p>
+            <ul class="chips chips--sm"><li>MySQL</li><li>SQL</li></ul>
+            <span class="card__go" aria-hidden="true">View repo →</span>
+          </a>
+          <a class="card card--link reveal" href="https://github.com/shubhamrathi020/nestjs-prisma" target="_blank" rel="noopener">
+            <h3>NestJS + Prisma</h3>
+            <p>NestJS service exploring typed data access with Prisma.</p>
+            <ul class="chips chips--sm"><li>NestJS</li><li>Prisma</li><li>TypeScript</li></ul>
+            <span class="card__go" aria-hidden="true">View repo →</span>
+          </a>
+          <a class="card card--link reveal" href="https://github.com/shubhamrathi020/react-test-frontend-main" target="_blank" rel="noopener">
+            <h3>React frontend</h3>
+            <p>React application with a Docker setup for containerised builds.</p>
+            <ul class="chips chips--sm"><li>React</li><li>Docker</li></ul>
+            <span class="card__go" aria-hidden="true">View repo →</span>
+          </a>
+          <a class="card card--link card--more reveal" href="https://github.com/shubhamrathi020?tab=repositories" target="_blank" rel="noopener">
+            <h3>More on GitHub</h3>
+            <p>Browse every public repository and what I'm working on next.</p>
+            <span class="card__go" aria-hidden="true">github.com/shubhamrathi020 →</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education" class="section">
+      <div class="wrap grid-2">
+        <div class="reveal">
+          <p class="kicker">Education</p>
+          <h2>Where I started</h2>
+        </div>
+        <div class="reveal">
+          <div class="edu">
+            <div class="edu__year mono">2014 – 2018</div>
+            <div>
+              <h3>B.Tech, Mechanical Engineering</h3>
+              <p>Jaipur Engineering College &amp; Research Centre, Jaipur</p>
+              <p class="muted">An engineering background that shaped how I break problems down — then I moved into software and never looked back.</p>
+            </div>
+          </div>
+          <div class="beyond">
+            <h3>Beyond code</h3>
+            <ul class="chips">
+              <li>Drawing &amp; painting</li><li>Dancing</li><li>Yoga</li><li>Exercise</li><li>Volleyball</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section--cta">
+      <div class="wrap contact reveal">
+        <p class="kicker">Contact</p>
+        <h2>Let's build something solid.</h2>
+        <p class="lead">I'm open to senior and lead engineering opportunities. The best way to reach me is email.</p>
+        <div class="cta cta--center">
+          <a class="btn btn--primary" href="mailto:rathishubham12015@gmail.com">Email me</a>
+          <a class="btn btn--ghost" href="https://github.com/shubhamrathi020" target="_blank" rel="noopener">GitHub</a>
+          <!-- Add your LinkedIn here:
+          <a class="btn btn--ghost" href="https://www.linkedin.com/in/YOUR-HANDLE" target="_blank" rel="noopener">LinkedIn</a> -->
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year">2026</span> Shubham Rathi. All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
